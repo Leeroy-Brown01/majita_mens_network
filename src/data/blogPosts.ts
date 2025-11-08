@@ -1,0 +1,48 @@
+import type { BlogPost } from '../types';
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'Breaking the Silence: My Journey to Mental Wellness',
+    excerpt: 'For years, I thought asking for help was a sign of weakness. Here\'s how I learned that vulnerability is actually strength.',
+    content: 'Full blog content here...',
+    author: 'Thabo Mokoena',
+    date: '2024-10-15',
+    category: 'Personal Stories',
+    coverImage: '/images/placeholder.svg',
+    readTime: '5 min read',
+  },
+  {
+    id: '2',
+    title: 'Understanding Gender-Based Violence: A Psychologist\'s Perspective',
+    excerpt: 'Dr. Sarah Johnson explains the psychological impacts of GBV and pathways to healing.',
+    content: 'Full blog content here...',
+    author: 'Dr. Sarah Johnson',
+    date: '2024-10-20',
+    category: 'Expert Advice',
+    coverImage: '/images/placeholder.svg',
+    readTime: '8 min read',
+  },
+  {
+    id: '3',
+    title: '16 Days of Activism: Join the Movement',
+    excerpt: 'How you can participate in the global campaign to end violence against women and girls.',
+    content: 'Full blog content here...',
+    author: 'Majita Team',
+    date: '2024-11-01',
+    category: 'Awareness Campaigns',
+    coverImage: '/images/placeholder.svg',
+    readTime: '4 min read',
+  },
+  {
+    id: '4',
+    title: 'Upcoming Workshop: Healthy Masculinity and Emotional Intelligence',
+    excerpt: 'Join us for an interactive workshop on November 25th exploring what it means to be a man in today\'s world.',
+    content: 'Full blog content here...',
+    author: 'Majita Team',
+    date: '2024-11-04',
+    category: 'Workshops & Events',
+    coverImage: '/images/placeholder.svg',
+    readTime: '3 min read',
+  },
+];

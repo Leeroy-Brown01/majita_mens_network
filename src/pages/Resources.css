@@ -1,0 +1,269 @@
+.resources-page {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-dark-gray);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--color-dark-gray);
+  text-align: center;
+}
+
+/* Topics Section */
+.topics-section {
+  padding: 4rem 0;
+}
+
+/* Videos Section */
+.videos-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--color-light-gray) 0%, var(--color-white) 100%);
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.video-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-info {
+  padding: 1.5rem;
+}
+
+.video-info h3 {
+  color: var(--color-black);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.video-info p {
+  color: var(--color-dark-gray);
+  line-height: 1.6;
+}
+
+.youtube-cta {
+  text-align: center;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-cta p {
+  font-size: 1.2rem;
+  color: var(--color-dark-gray);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.youtube-icon {
+  color: #ff0000;
+  font-size: 2rem;
+}
+
+.youtube-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #ff0000;
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.youtube-button:hover {
+  background-color: #cc0000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Downloads Section */
+.downloads-section {
+  padding: 4rem 0;
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.download-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-5px);
+}
+
+.download-icon {
+  font-size: 3rem;
+  color: var(--color-baby-blue);
+  margin-bottom: 1.5rem;
+}
+
+.download-card h3 {
+  color: var(--color-black);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.download-card p {
+  color: var(--color-dark-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.download-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.file-format {
+  background-color: var(--color-baby-blue);
+  color: var(--color-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.file-size {
+  background-color: var(--color-light-gray);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.download-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--color-baby-blue) 0%, var(--color-light-blue) 100%);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(167, 199, 231, 0.4);
+}
+
+/* Submit Section */
+.submit-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--color-baby-blue) 0%, var(--color-light-blue) 100%);
+  color: var(--color-white);
+}
+
+.submit-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.submit-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.submit-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.submit-button {
+  padding: 1rem 2rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .youtube-cta p {
+    flex-direction: column;
+  }
+}
