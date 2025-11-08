@@ -100,6 +100,21 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-method">
+                  <FaWhatsapp className="contact-icon whatsapp" />
+                  <div>
+                    <h4>Join Our Community</h4>
+                    <a
+                      href="https://chat.whatsapp.com/Hb6L6EfU72u5glneBy619G"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Join WhatsApp Group
+                    </a>
+                    <p className="method-note">Connect with others in our support community</p>
+                  </div>
+                </div>
+
+                <div className="contact-method">
                   <FaFacebook className="contact-icon" />
                   <div>
                     <h4>Connect Online</h4>
@@ -198,10 +213,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3>Can I get help if I'm not in South Africa?</h3>
+              <h3>Can I get help anywhere?</h3>
               <p>
-                While our physical centers are in South Africa, our online resources are available 
-                globally. We can also help connect you with support services in your country.
+                Our online resources are available globally. We can also help connect you with support services in your country.
               </p>
             </motion.div>
           </div>

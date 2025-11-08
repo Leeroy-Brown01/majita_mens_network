@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp, FaHeart } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { SITE_NAME, SOCIAL_LINKS } from '../utils/constants';
 import './Footer.css';
 
