@@ -82,7 +82,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
         <p>
-          Made with <FaHeart className="heart-icon" /> for a better world
+          <i>Designed by <b>BrownTech</b></i>
         </p>
       </div>
 
