@@ -122,7 +122,14 @@ const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaLinkedin className="contact-inline-icon" /> LinkedIn: Majita Men’s Network
+                      <FaLinkedin className="contact-inline-icon" /> LinkedIn: Majita Men's Network
+                    </a>
+                    <a
+                      href="https://chat.whatsapp.com/Hb6L6EfU72u5glneBy619G"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaWhatsapp className="contact-inline-icon" /> Join Our WhatsApp Group
                     </a>
                   </div>
                 </div>

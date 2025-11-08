@@ -18,6 +18,8 @@ const Footer = () => {
         return <FaLinkedin />;
       case 'WhatsApp':
         return <FaWhatsapp />;
+      case 'WhatsApp Group':
+        return <FaWhatsapp />;
       default:
         return null;
     }

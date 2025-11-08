@@ -52,22 +52,22 @@ const About = () => {
 
   const team = [
     {
-      name: 'Dr. Thabo Ndlovu',
+      name: 'Leeroy x',
       role: 'Founder & Director',
       image: '/images/team-member-1.jpg',
-      bio: 'Clinical psychologist specializing in trauma and men\'s mental health.',
+      bio: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     },
     {
-      name: 'Sarah Mokoena',
+      name: 'Melo Mhlanga',
       role: 'Program Manager',
       image: '/images/team-group-1.jpg',
-      bio: 'Social worker with 10 years of experience in GBV prevention and support.',
+      bio: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     },
     {
-      name: 'David Williams',
+      name: 'Squad Rese',
       role: 'Community Outreach Lead',
       image: '/images/team-group-2.jpg',
-      bio: 'Former journalist and mental health advocate passionate about ending violence.',
+      bio: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.',
     },
   ];
 

@@ -36,6 +36,10 @@ export const SOCIAL_LINKS = [
     platform: 'WhatsApp',
     url: 'https://wa.me/263787518760',
   },
+  {
+    platform: 'WhatsApp Group',
+    url: 'https://chat.whatsapp.com/Hb6L6EfU72u5glneBy619G',
+  },
 ];
 
 export const NAVIGATION_LINKS = [
