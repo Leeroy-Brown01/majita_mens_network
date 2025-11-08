@@ -229,10 +229,16 @@ const About = () => {
               there are many ways to get involved and make a difference.
             </p>
             <div className="cta-buttons">
-              <a href="#volunteer" className="cta-button cta-button-primary">
+              <a 
+                href="mailto:majitamensnetwork@gmail.com?subject=Volunteer Application&body=Hi Majita Men's Network Team,%0D%0A%0D%0AI would like to volunteer with your organization.%0D%0A%0D%0AName: %0D%0APhone: %0D%0ALocation: %0D%0A%0D%0APlease let me know how I can get involved.%0D%0A%0D%0AThank you!" 
+                className="cta-button cta-button-primary"
+              >
                 Become a Volunteer
               </a>
-              <a href="#partner" className="cta-button cta-button-secondary">
+              <a 
+                href="mailto:majitamensnetwork@gmail.com?subject=Partnership Inquiry&body=Hi Majita Men's Network Team,%0D%0A%0D%0AI am interested in partnering with your organization.%0D%0A%0D%0AOrganization Name: %0D%0AContact Person: %0D%0AEmail: %0D%0APhone: %0D%0A%0D%0APartnership Details: %0D%0A%0D%0AThank you!" 
+                className="cta-button cta-button-secondary"
+              >
                 Partner With Us
               </a>
             </div>

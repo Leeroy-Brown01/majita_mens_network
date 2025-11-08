@@ -1,34 +1,11 @@
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaWhatsapp, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import Hero from '../components/Hero';
 import ContactForm from '../components/ContactForm';
 import { EMERGENCY_HOTLINES } from '../utils/constants';
 import './Contact.css';
 
 const Contact = () => {
-  const supportCenters = [
-    {
-      id: '1',
-      name: 'Johannesburg Support Center',
-      address: '123 Main Street, Johannesburg, 2000',
-      phone: '011 123 4567',
-      email: 'jhb@majitanetwork.org',
-    },
-    {
-      id: '2',
-      name: 'Cape Town Support Center',
-      address: '456 Long Street, Cape Town, 8001',
-      phone: '021 234 5678',
-      email: 'cpt@majitanetwork.org',
-    },
-    {
-      id: '3',
-      name: 'Durban Support Center',
-      address: '789 Marine Drive, Durban, 4001',
-      phone: '031 345 6789',
-      email: 'dbn@majitanetwork.org',
-    },
-  ];
 
   return (
     <div className="contact-page">
@@ -160,41 +137,6 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="centers-section">
-        <div className="container">
-          <h2 className="section-title">Visit Our Support Centers</h2>
-          <p className="section-subtitle">
-            Walk-in services available. All visitors are welcome in a safe, judgment-free environment.
-          </p>
-          <div className="centers-grid">
-            {supportCenters.map((center, index) => (
-              <motion.div
-                key={center.id}
-                className="center-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <h3>{center.name}</h3>
-                <div className="center-detail">
-                  <FaMapMarkerAlt className="detail-icon" />
-                  <p>{center.address}</p>
-                </div>
-                <div className="center-detail">
-                  <FaPhone className="detail-icon" />
-                  <a href={`tel:${center.phone.replace(/\s/g, '')}`}>{center.phone}</a>
-                </div>
-                <div className="center-detail">
-                  <FaEnvelope className="detail-icon" />
-                  <a href={`mailto:${center.email}`}>{center.email}</a>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
