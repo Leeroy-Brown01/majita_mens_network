@@ -114,10 +114,7 @@ export const learningResources: AccordionItem[] = [
       
       <h3>Emergency Helplines:</h3>
       <ul>
-        <li>GBV Command Centre: 0800 428 428 (24/7)</li>
-        <li>Lifeline: 0861 322 322</li>
-        <li>SADAG: 0800 567 567</li>
-        <li>Stop Gender Violence: 0800 150 150</li>
+        <li><strong>Majita Men's Network:</strong> +263 78 751 8760 (24/7)</li>
       </ul>
       
       <h3>What to Expect:</h3>

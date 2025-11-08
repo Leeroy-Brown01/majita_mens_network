@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaWhatsapp, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import Hero from '../components/Hero';
 import ContactForm from '../components/ContactForm';
-import { EMERGENCY_HOTLINES } from '../utils/constants';
 import './Contact.css';
 
 const Contact = () => {
@@ -27,26 +26,23 @@ const Contact = () => {
             <h2>⚠️ Need Immediate Help?</h2>
             <p>
               If you or someone you know is in immediate danger or experiencing a crisis, 
-              please call one of these 24/7 emergency hotlines:
+              please call our emergency helpline:
             </p>
             <div className="hotlines-grid">
-              {EMERGENCY_HOTLINES.map((hotline, index) => (
-                <motion.div
-                  key={index}
-                  className="hotline-card"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  <FaPhone className="hotline-icon" />
-                  <h3>{hotline.name}</h3>
-                  <a href={`tel:${hotline.number.replace(/\s/g, '')}`} className="hotline-number">
-                    {hotline.number}
-                  </a>
-                  <p className="hotline-description">{hotline.description}</p>
-                </motion.div>
-              ))}
+              <motion.div
+                className="hotline-card"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+              >
+                <FaPhone className="hotline-icon" />
+                <h3>Majita Emergency Helpline</h3>
+                <a href="tel:+263787518760" className="hotline-number">
+                  +263 78 751 8760
+                </a>
+                <p className="hotline-description">24/7 support and crisis intervention</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>

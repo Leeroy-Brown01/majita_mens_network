@@ -13,24 +13,9 @@ export const COLORS = {
 
 export const EMERGENCY_HOTLINES = [
   {
-    name: 'GBV Command Centre',
-    number: '0800 428 428',
-    description: '24/7 support for gender-based violence',
-  },
-  {
-    name: 'Lifeline South Africa',
-    number: '0861 322 322',
-    description: 'Mental health crisis support',
-  },
-  {
-    name: 'SADAG (South African Depression and Anxiety Group)',
-    number: '0800 567 567',
-    description: 'Depression and anxiety support',
-  },
-  {
-    name: 'Stop Gender Violence Helpline',
-    number: '0800 150 150',
-    description: 'Free counselling for GBV survivors',
+    name: 'Majita Men\'s Network Emergency Helpline',
+    number: '+263 78 751 8760',
+    description: '24/7 crisis support and mental health assistance',
   },
 ];
 
@@ -56,6 +41,7 @@ export const SOCIAL_LINKS = [
 export const NAVIGATION_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
+  { name: 'Services', path: '/services' },
   { name: 'Learn & Resources', path: '/resources' },
   { name: 'Contact', path: '/contact' },
 ];

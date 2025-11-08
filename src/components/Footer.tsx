@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp, FaHeart } from 'react-icons/fa';
-import { SITE_NAME, SOCIAL_LINKS, EMERGENCY_HOTLINES } from '../utils/constants';
+import { SITE_NAME, SOCIAL_LINKS } from '../utils/constants';
 import './Footer.css';
 
 const Footer = () => {
@@ -54,13 +54,11 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Emergency Help</h4>
           <ul className="emergency-list">
-            {EMERGENCY_HOTLINES.slice(0, 2).map((hotline) => (
-              <li key={hotline.number}>
-                <strong>{hotline.name}</strong>
-                <br />
-                <a href={`tel:${hotline.number.replace(/\s/g, '')}`}>{hotline.number}</a>
-              </li>
-            ))}
+            <li>
+              <strong>Majita Emergency Helpline</strong>
+              <br />
+              <a href="tel:+263787518760">+263 78 751 8760</a>
+            </li>
           </ul>
         </div>
 
