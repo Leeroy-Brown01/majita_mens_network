@@ -4,6 +4,10 @@ import { SITE_NAME, SOCIAL_LINKS } from '../utils/constants';
 import './Footer.css';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const getSocialIcon = (platform: string) => {
     switch (platform) {
       case 'Facebook':
@@ -44,10 +48,11 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/resources">Learn & Resources</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
+            <li><Link to="/about" onClick={scrollToTop}>About Us</Link></li>
+            <li><Link to="/services" onClick={scrollToTop}>Services</Link></li>
+            <li><Link to="/resources" onClick={scrollToTop}>Learn & Resources</Link></li>
+            <li><Link to="/contact" onClick={scrollToTop}>Contact</Link></li>
           </ul>
         </div>
 
