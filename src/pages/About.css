@@ -335,33 +335,64 @@
 }
 
 @media screen and (max-width: 768px) {
+  .mission-section,
+  .values-section,
+  .timeline-section,
+  .team-section,
+  .activism-section,
+  .cta-section {
+    padding: 3rem 0;
+  }
+
   .activism-content {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .activism-image {
     order: -1;
   }
 
+  .activism-text h2 {
+    font-size: 2rem;
+  }
+
+  .activism-text p {
+    font-size: 1.1rem;
+  }
+
   .timeline::before {
-    left: 50px;
+    left: 30px;
   }
 
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 2rem;
   }
 
   .timeline-year {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
     margin: 0 0 1rem 0;
   }
 
   .timeline-content {
     margin-left: 0;
+    width: 100%;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
   }
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
   }
 
   .mission-content,
@@ -369,11 +400,170 @@
     padding: 2rem;
   }
 
+  .mission-content h2,
+  .vision-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .mission-content p,
+  .vision-content p {
+    font-size: 1.1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .value-card {
+    padding: 1.75rem;
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .member-image {
+    height: 250px;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-content p {
+    font-size: 1.2rem;
+  }
+
   .cta-buttons {
     flex-direction: column;
+    gap: 0.75rem;
   }
 
   .cta-button {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mission-section,
+  .values-section,
+  .timeline-section,
+  .team-section,
+  .activism-section,
+  .cta-section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .mission-content,
+  .vision-content {
+    padding: 1.5rem;
+  }
+
+  .mission-content h2,
+  .vision-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mission-content p,
+  .vision-content p {
+    font-size: 1rem;
+  }
+
+  .activism-text h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .activism-text p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+
+  .value-icon {
+    font-size: 2.25rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-year {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+
+  .member-image {
+    height: 200px;
+  }
+
+  .team-member h3 {
+    font-size: 1.3rem;
+  }
+
+  .member-role {
+    font-size: 0.95rem;
+  }
+
+  .member-bio {
+    font-size: 0.9rem;
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.875rem 1.75rem;
   }
 }

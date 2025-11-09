@@ -151,9 +151,19 @@ button {
 }
 
 /* Responsive Typography */
+@media screen and (max-width: 968px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 
   h1 {
@@ -174,6 +184,14 @@ button {
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -184,5 +202,9 @@ button {
 
   h3 {
     font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
   }
 }

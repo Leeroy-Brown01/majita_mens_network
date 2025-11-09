@@ -298,6 +298,7 @@
 @media screen and (max-width: 968px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .info-column {
@@ -314,5 +315,132 @@
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .emergency-section {
+    padding: 2rem 0;
+  }
+
+  .contact-form-section,
+  .centers-section,
+  .faq-section {
+    padding: 3rem 0;
+  }
+
+  .emergency-alert h2 {
+    font-size: 1.75rem;
+  }
+
+  .emergency-alert > p {
+    font-size: 1.1rem;
+  }
+
+  .hotline-card {
+    padding: 1.5rem;
+  }
+
+  .hotline-number {
+    font-size: 1.5rem;
+  }
+
+  .form-column h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-info-card {
+    padding: 2rem;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-method {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .emergency-section,
+  .contact-form-section,
+  .centers-section,
+  .faq-section {
+    padding: 2rem 0;
+  }
+
+  .emergency-alert h2 {
+    font-size: 1.5rem;
+  }
+
+  .emergency-alert > p {
+    font-size: 1rem;
+  }
+
+  .hotline-icon {
+    font-size: 2rem;
+  }
+
+  .hotline-number {
+    font-size: 1.3rem;
+  }
+
+  .form-column h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-column > p {
+    font-size: 0.95rem;
+  }
+
+  .contact-info-card {
+    padding: 1.5rem;
+  }
+
+  .contact-info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .contact-method h4 {
+    font-size: 1.1rem;
+  }
+
+  .privacy-notice {
+    padding: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .faq-item {
+    padding: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .faq-item p {
+    font-size: 0.95rem;
   }
 }
