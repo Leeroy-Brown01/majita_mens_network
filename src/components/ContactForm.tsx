@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import type { ContactFormData } from '../types';
+import { EMAIL_CONFIG } from '../config/email.config';
 import './ContactForm.css';
 
 interface ContactFormProps {
@@ -34,22 +36,38 @@ const ContactForm = ({ onSubmit }: ContactFormProps) => {
     setSubmitMessage('');
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        category: formData.category,
+        message: formData.message,
+        to_email: EMAIL_CONFIG.TO_EMAIL,
+      };
 
-      if (onSubmit) {
-        onSubmit(formData);
+      const response = await emailjs.send(
+        EMAIL_CONFIG.SERVICE_ID,
+        EMAIL_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAIL_CONFIG.PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        setSubmitMessage('Thank you for reaching out. We will get back to you soon.');
+        setFormData({
+          name: '',
+          email: '',
+          category: 'General Inquiry',
+          message: '',
+        });
+
+        if (onSubmit) {
+          onSubmit(formData);
+        }
       }
-
-      setSubmitMessage('Thank you for reaching out. We will get back to you soon.');
-      setFormData({
-        name: '',
-        email: '',
-        category: 'General Inquiry',
-        message: '',
-      });
     } catch (error) {
-      setSubmitMessage('Something went wrong. Please try again.');
+      console.error('Email sending failed:', error);
+      setSubmitMessage('Something went wrong. Please try again or contact us at majitamensnetwork@gmail.com');
     } finally {
       setIsSubmitting(false);
     }
