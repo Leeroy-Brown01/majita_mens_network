@@ -28,12 +28,13 @@ function Donate() {
     const formDataToSend = new FormData(form);
     
     // Add additional recipients
-    formDataToSend.append('_cc', 'majitamensnetwork@gmail.com');
+    formDataToSend.append('_cc', 'melodymhlanga7@gmail.com');
+    formDataToSend.append('_cc', 'brownleeroy010@gmail.com');
     formDataToSend.append('_subject', 'New Donation from Majita Website');
     formDataToSend.append('_template', 'table');
     
     try {
-      const response = await fetch('https://formspree.io/f/xwpgqdpn', {
+      const response = await fetch('https://formspree.io/f/mldqlyjq', {
         method: 'POST',
         body: formDataToSend,
         headers: {
@@ -86,7 +87,7 @@ function Donate() {
               <h3>Donate</h3>
               <p className="form-subtitle">Fundraising big costs</p>
               <form className="donate-form" onSubmit={handleSubmit} action="https://formspree.io/f/xwpgqdpn" method="POST">
-                <input type="hidden" name="_to" value="brownleeroy010@gmail.com" />
+                <input type="hidden" name="_to" value="majitamensnetwork@gmail.com" />
                 
                 <div className="form-row">
                   <div className="form-group">
