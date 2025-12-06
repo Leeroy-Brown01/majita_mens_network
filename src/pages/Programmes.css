@@ -1,0 +1,192 @@
+.programmes-page {
+  width: 100%;
+}
+
+.programmes-hero {
+  background-image: url('/images/branding/programmes_hero_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.programmes-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.programmes-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.programmes-hero h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.programmes-subtitle {
+  font-size: 1.3rem;
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.programmes-content {
+  padding: 4rem 0;
+}
+
+.programmes-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.programmes-intro h2 {
+  color: var(--color-black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.programmes-intro p {
+  color: var(--color-dark-gray);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.programmes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.programme-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-baby-blue);
+  border-radius: 10px;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.programme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(167, 199, 231, 0.3);
+  border-color: var(--color-yellow);
+}
+
+.programme-icon {
+  font-size: 3rem;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
+.programme-card h3 {
+  color: var(--color-black);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.programme-card p {
+  color: var(--color-dark-gray);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.programme-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.programme-card ul li {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.programme-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.join-programme {
+  background-color: var(--color-baby-blue);
+  padding: 3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.join-programme h2 {
+  color: var(--color-black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.join-programme p {
+  color: var(--color-black);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.join-btn {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.join-btn:hover {
+  background-color: #f1c40f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 208, 63, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .programmes-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .programmes-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .programmes-intro h2,
+  .join-programme h2 {
+    font-size: 2rem;
+  }
+
+  .programmes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .programme-card {
+    padding: 2rem;
+  }
+}

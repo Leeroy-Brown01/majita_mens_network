@@ -1,211 +1,102 @@
-# Majita Men's Network
+# Majita Men's Network Website
 
-A responsive, component-based website dedicated to raising awareness about Gender-Based Violence (GBV) and promoting Men's Mental Health and emotional well-being.
+A React-based website for Majita Men's Network - an organization dedicated to empowering men and boys to become champions of positive masculinity, healthy relationships, and gender equality.
 
-## 🌟 Project Overview
+## 🎯 Mission
 
-This platform creates a safe, inclusive, and non-judgmental digital space that:
-- Educates about GBV and gender equality
-- Provides mental health resources for men
-- Encourages community engagement through stories and testimonials
-- Offers guidance and support for those seeking help
+Raising better boys. Building better men.
 
-## 🎨 Design
+## 🌟 Features
 
-### Color Palette
-- **Baby Blue**: `#A7C7E7`
-- **Light Blue**: `#87CEFA`
-- **Black**: `#000000`
-- **White**: `#FFFFFF`
+- **Home**: Hero section with organizational mission and core pillars
+- **About Us**: Vision, mission, and organizational values
+- **Chapters**: Information about chapters across Zimbabwe
+- **Programs**: Detailed program offerings including mentorship and advocacy
+- **Media & Gallery**: Photo gallery showcasing our impact
+- **Donate**: Support page with donation form and impact information
 
-### Typography
-- **Font Family**: Poppins (Google Fonts)
-- Clean, modern sans-serif design for optimal readability
+## 🛠️ Tech Stack
 
-## 📁 Project Structure
-
-```
-majita_mens_network/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Card.tsx
-│   │   ├── Accordion.tsx
-│   │   ├── Carousel.tsx
-│   │   ├── VideoEmbed.tsx
-│   │   └── ContactForm.tsx
-│   ├── pages/              # Page components
-│   │   ├── Home.tsx
-│   │   ├── About.tsx
-│   │   ├── Resources.tsx
-│   │   ├── Blog.tsx
-│   │   └── Contact.tsx
-│   ├── data/               # Static data
-│   │   ├── blogPosts.ts
-│   │   └── resources.ts
-│   ├── types/              # TypeScript type definitions
-│   │   └── index.ts
-│   ├── utils/              # Constants and utilities
-│   │   └── constants.ts
-│   ├── App.tsx
-│   ├── App.css
-│   ├── main.tsx
-│   └── index.css
-├── public/
-├── package.json
-└── README.md
-```
+- React 18
+- TypeScript
+- React Router v7
+- Vite
+- CSS3 with custom variables
+- React Icons
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd majita_mens_network
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Start the development server:
-```bash
+# Run development server
 npm run dev
-```
 
-4. Open your browser and navigate to `http://localhost:5173`
-
-### Build for Production
-
-```bash
+# Build for production
 npm run build
-```
 
-The built files will be in the `dist` directory.
-
-### Preview Production Build
-
-```bash
+# Preview production build
 npm run preview
 ```
 
-## 📄 Pages
+## 📁 Project Structure
 
-### 1. Home
-- Hero section with call-to-action buttons
-- Statistics and impact infographics
-- Featured video content
-- Testimonials carousel
-- Latest blog posts
-- Emergency resources
+```
+majita_mens_network/
+├── public/
+│   └── images/
+│       └── branding/      # Logo and brand images
+├── src/
+│   ├── components/        # Reusable components
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── pages/            # Page components
+│   │   ├── Home.tsx
+│   │   ├── About.tsx
+│   │   ├── Chapters.tsx
+│   │   ├── Programmes.tsx
+│   │   ├── MediaGallery.tsx
+│   │   └── Donate.tsx
+│   ├── App.tsx           # Main app component
+│   ├── main.tsx          # Entry point
+│   └── index.css         # Global styles
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
 
-### 2. About Us
-- Mission and vision statements
-- Core values
-- Organization timeline
-- Team profiles
-- Partnership opportunities
+## 🎨 Design System
 
-### 3. Learn & Resources
-- Expandable accordion with educational topics:
-  - Understanding Gender-Based Violence
-  - Signs of Emotional Distress in Men
-  - Coping Strategies and Mindfulness Tips
-  - Building Healthy Relationships
-  - How to Seek Help
-- Educational video library
-- Downloadable PDF guides and materials
+### Colors
+- Baby Blue: #A7C7E7
+- Light Blue: #87CEFA
+- Yellow: #F4D03F
+- Black: #000000
+- White: #FFFFFF
 
-### 4. Blog & Stories
-- Blog post feed with filtering by category
-- Search functionality
-- Categories:
-  - Personal Stories
-  - Expert Advice
-  - Awareness Campaigns
-  - Workshops & Events
-- "Write for Us" submission section
-- Newsletter subscription
+### Typography
+- Font Family: Poppins (Google Fonts)
+- Weights: 300-800
 
-### 5. Contact & Get Help
-- Emergency hotline numbers (24/7)
-- Contact form with categories
-- WhatsApp support link
-- Support center locations
-- FAQs section
+## 📞 Contact
 
-## 🛠️ Technologies Used
-
-- **React 19** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **Framer Motion** - Animations
-- **React Icons** - Icon library
-- **CSS3** - Styling with custom properties
-
-## ♿ Accessibility Features
-
-- WCAG-compliant design with proper color contrast
-- Keyboard navigation support
-- Screen reader friendly with semantic HTML
-- Alt text for images
-- Focus states for interactive elements
-- Content sensitivity warnings
-
-## 🔒 Privacy & Safety
-
-- All communications are confidential
-- Anonymous support options available
-- Content warnings for sensitive material
-- Secure contact forms
-
-## 📱 Responsive Design
-
-Fully responsive and optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (< 768px)
-
-## 🌐 Emergency Hotlines
-
-The website prominently displays these South African emergency numbers:
-
-- **GBV Command Centre**: 0800 428 428
-- **Lifeline**: 0861 322 322
-- **SADAG**: 0800 567 567
-- **Stop Gender Violence**: 0800 150 150
-
-## 🤝 Contributing
-
-We welcome contributions! Areas where you can help:
-- Add more resources and educational content
-- Improve accessibility
-- Translate content to other languages
-- Report bugs and suggest features
+- **Email**: majitamensnetwork@gmail.com
+- **Phone**: +263 78 751 8760
+- **WhatsApp Group**: [Join Here](https://chat.whatsapp.com/Hb6L6EfU72u5glneBy619G)
 
 ## 📝 License
 
-This project is created for educational and awareness purposes.
+© 2024 Majita Men's Network. All rights reserved.
 
-## 💙 Support
+## 🙏 Acknowledgments
 
-If you need help or support:
-- Email: info@majitanetwork.org
-- Phone: +27 12 345 6789
-- WhatsApp: Available 24/7
-
----
-
-**Remember**: You are not alone. It's okay to ask for help. 💙
-
-**Together Against Silence — Healing Minds, Ending Violence**
+Working to end gender-based violence through positive masculinity and community engagement.

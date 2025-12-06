@@ -1,172 +1,87 @@
+import { FaHandsHelping, FaUsers, FaShieldAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { FaHandsHelping, FaHeart, FaBrain, FaUsers } from 'react-icons/fa';
-import Hero from '../components/Hero';
-import VideoEmbed from '../components/VideoEmbed';
-import Carousel from '../components/Carousel';
 import './Home.css';
 
-const Home = () => {
-  const testimonials = [
-    {
-      id: '1',
-      content: (
-        <div className="testimonial">
-          <p className="quote">
-            "Finding Majita Men's Network changed my life. I learned that it's okay to talk about 
-            my feelings and ask for help. I'm no longer suffering in silence."
-          </p>
-          <p className="author">— Sipho M., Johannesburg</p>
-        </div>
-      ),
-    },
-    {
-      id: '2',
-      content: (
-        <div className="testimonial">
-          <p className="quote">
-            "This platform helped me understand what healthy masculinity looks like. I'm now a 
-            better partner, father, and friend because I learned to manage my emotions."
-          </p>
-          <p className="author">— David K., Cape Town</p>
-        </div>
-      ),
-    },
-    {
-      id: '3',
-      content: (
-        <div className="testimonial">
-          <p className="quote">
-            "As a survivor of violence, I didn't know where to turn. The resources here guided me 
-            to professional help and a support group. I'm healing and helping others now."
-          </p>
-          <p className="author">— Anonymous</p>
-        </div>
-      ),
-    },
-  ];
-
-  const stats = [
-    {
-      icon: <FaUsers />,
-      number: '1 in 3',
-      label: 'Women experience GBV globally',
-    },
-    {
-      icon: <FaBrain />,
-      number: '75%',
-      label: 'Of men hesitate to seek mental health support',
-    },
-    {
-      icon: <FaHeart />,
-      number: '10,000+',
-      label: 'Lives touched through our programs',
-    },
-    {
-      icon: <FaHandsHelping />,
-      number: '24/7',
-      label: 'Support available through our hotlines',
-    },
-  ];
-
+function Home() {
   return (
-    <div className="home-page">
-      <Hero
-        title="Together Against Silence — Healing Minds, Ending Violence"
-        subtitle="A safe space for men to talk about mental health and join the fight against gender-based violence"
-        backgroundImage="/images/team-group-1.jpg"
-      >
-        <Link to="/contact" className="hero-button hero-button-primary">
-          Get Help Now
-        </Link>
-        <Link to="/resources" className="hero-button hero-button-secondary">
-          Learn More
-        </Link>
-      </Hero>
-
-      <section className="stats-section">
-        <div className="container">
-          <motion.div
-            className="stats-grid"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="stat-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="stat-icon">{stat.icon}</div>
-                <h3 className="stat-number">{stat.number}</h3>
-                <p className="stat-label">{stat.label}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+    <div className="home">
+      {/* Hero Section with Background Image */}
+      <section className="hero-section">
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <h1>RAISING BETTER BOYS.<br />BUILDING BETTER MEN.</h1>
+          <Link to="/programmes" className="hero-btn">LEARN MORE</Link>
         </div>
       </section>
 
-      <section className="video-section">
+      {/* Who We Are Section - Baby Blue */}
+      <section className="who-we-are-section">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="section-title">Watch: Breaking the Silence</h2>
-            <p className="section-subtitle">
-              Hear from mental health experts and survivors about the importance of speaking up
-            </p>
-            <VideoEmbed
-              url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              title="Breaking the Silence - Mental Health Awareness"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="testimonials-section">
-        <div className="container">
-          <h2 className="section-title">Real Stories, Real Impact</h2>
-          <p className="section-subtitle">
-            Hear from people whose lives have been transformed
+          <h2>WHO WE ARE</h2>
+          <p>
+            Majita Men's Network is a dynamic initiative dedicated to empowering boys and men to become 
+            champions of positive masculinity, healthy relationships, and gender equality. Through mentorship, 
+            advocacy, and community engagement, we are transforming lives and building a future free from 
+            gender-based violence.
           </p>
-          <Carousel items={testimonials} />
         </div>
       </section>
 
-      <section className="cta-section">
+      {/* What We Do Section - White with Icons */}
+      <section className="what-we-do-section">
         <div className="container">
-          <motion.div
-            className="cta-content"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2>You Are Not Alone</h2>
-            <p>
-              Whether you need support or want to help make a difference, we're here for you.
-            </p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="cta-button cta-button-primary">
-                Reach Out for Help
-              </Link>
-              <Link to="/about" className="cta-button cta-button-secondary">
-                Join Our Mission
-              </Link>
+          <div className="pillars-grid">
+            <div className="pillar-card">
+              <div className="pillar-icon">
+                <FaHandsHelping />
+              </div>
+              <h3>Mentorship Programs</h3>
+              <p>
+                Guiding young men through life's challenges with positive role models who promote healthy 
+                masculinity and respectful relationships.
+              </p>
             </div>
-          </motion.div>
+
+            <div className="pillar-card">
+              <div className="pillar-icon">
+                <FaUsers />
+              </div>
+              <h3>Positive Masculinity</h3>
+              <p>
+                Redefining what it means to be a man through education, dialogue, and challenging harmful 
+                stereotypes and gender norms.
+              </p>
+            </div>
+
+            <div className="pillar-card">
+              <div className="pillar-icon">
+                <FaShieldAlt />
+              </div>
+              <h3>Ending Gender-Based Violence</h3>
+              <p>
+                Working to eliminate all forms of violence against women and girls through awareness, 
+                prevention, and community action.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do Title Section - Blue */}
+      <section className="what-we-do-title-section">
+        <div className="container">
+          <h2>WHAT WE DO</h2>
+          <p>
+            Through innovative programs and community partnerships, we engage men and boys in conversations 
+            about healthy masculinity, gender equality, and the prevention of gender-based violence.
+          </p>
+          <div className="info-banner">
+            <img src="/images/branding/info_banner.jpg" alt="Majita Men's Network Information" className="banner-image" />
+          </div>
         </div>
       </section>
     </div>
   );
-};
+}
 
 export default Home;

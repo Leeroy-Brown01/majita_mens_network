@@ -1,16 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Resources from './pages/Resources';
-import Contact from './pages/Contact';
-import './App.css';
+import Navbar from './components/Navbar.tsx';
+import Footer from './components/Footer.tsx';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import Chapters from './pages/Chapters.tsx';
+import Programmes from './pages/Programmes.tsx';
+import MediaGallery from './pages/MediaGallery.tsx';
+import Donate from './pages/Donate.tsx';
 
 function App() {
-  console.log('App rendering...');
-  
   return (
     <Router>
       <div className="app">
@@ -19,9 +17,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/chapters" element={<Chapters />} />
+            <Route path="/programmes" element={<Programmes />} />
+            <Route path="/media" element={<MediaGallery />} />
+            <Route path="/donate" element={<Donate />} />
           </Routes>
         </main>
         <Footer />
