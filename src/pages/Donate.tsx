@@ -6,11 +6,15 @@ function Donate() {
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
+    email: '',
+    phone: '',
+    country: '',
+    city: '',
     address: '',
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -42,6 +46,10 @@ function Donate() {
         setFormData({
           firstname: '',
           lastname: '',
+         email: '',
+          phone: '',
+          country: '',
+          city: '',
           address: '',
           message: ''
         });
@@ -100,6 +108,70 @@ function Donate() {
                       id="lastname" 
                       name="lastname" 
                       value={formData.lastname}
+                      onChange={handleChange}
+                      required 
+                    />
+                  </div>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required 
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      placeholder="+263 XXX XXX XXX"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required 
+                    />
+                  </div>
+                </div>
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label htmlFor="country">Country</label>
+                    <select 
+                      id="country" 
+                      name="country" 
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Select Country</option>
+                      <option value="Zimbabwe">Zimbabwe</option>
+                      <option value="South Africa">South Africa</option>
+                      <option value="Botswana">Botswana</option>
+                      <option value="Zambia">Zambia</option>
+                      <option value="Mozambique">Mozambique</option>
+                      <option value="Malawi">Malawi</option>
+                      <option value="Namibia">Namibia</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="city">City</label>
+                    <input 
+                      type="text" 
+                      id="city" 
+                      name="city" 
+                      placeholder="Enter your city"
+                      value={formData.city}
                       onChange={handleChange}
                       required 
                     />
