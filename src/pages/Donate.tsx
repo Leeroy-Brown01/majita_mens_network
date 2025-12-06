@@ -1,7 +1,58 @@
-import { FaWhatsapp, FaHeart } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
+import { useState } from 'react';
 import './Donate.css';
 
 function Donate() {
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    address: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const form = e.target as HTMLFormElement;
+    const formDataToSend = new FormData(form);
+    
+    // Add additional recipients
+    formDataToSend.append('_cc', 'majitamensnetwork@gmail.com');
+    formDataToSend.append('_subject', 'New Donation from Majita Website');
+    formDataToSend.append('_template', 'table');
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xwpgqdpn', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        alert('Thank you for your donation! We will contact you shortly.');
+        setFormData({
+          firstname: '',
+          lastname: '',
+          address: '',
+          message: ''
+        });
+      } else {
+        alert('There was a problem submitting your donation. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      alert('There was a problem submitting your donation. Please try again or contact us directly.');
+    }
+  };
+
   return (
     <div className="donate-page">
       <section className="donate-hero">
@@ -26,31 +77,62 @@ function Donate() {
             <div className="donate-form-section">
               <h3>Donate</h3>
               <p className="form-subtitle">Fundraising big costs</p>
-              <form className="donate-form">
+              <form className="donate-form" onSubmit={handleSubmit} action="https://formspree.io/f/xwpgqdpn" method="POST">
+                <input type="hidden" name="_to" value="brownleeroy010@gmail.com" />
+                
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="firstname">First name</label>
-                    <input type="text" id="firstname" name="firstname" required />
+                    <input 
+                      type="text" 
+                      id="firstname" 
+                      name="firstname" 
+                      value={formData.firstname}
+                      onChange={handleChange}
+                      required 
+                    />
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="lastname">Last name</label>
-                    <input type="text" id="lastname" name="lastname" required />
+                    <input 
+                      type="text" 
+                      id="lastname" 
+                      name="lastname" 
+                      value={formData.lastname}
+                      onChange={handleChange}
+                      required 
+                    />
                   </div>
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="address">Address</label>
-                  <input type="text" id="address" name="address" placeholder="Enter your address" required />
+                  <input 
+                    type="text" 
+                    id="address" 
+                    name="address" 
+                    placeholder="Enter your address" 
+                    value={formData.address}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
-                  <textarea id="message" name="message" rows={4} placeholder="Your message"></textarea>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows={4} 
+                    placeholder="Your message"
+                    value={formData.message}
+                    onChange={handleChange}
+                  ></textarea>
                 </div>
 
                 <button type="submit" className="donate-btn">
-                  SEND DONATION DETAILS
+                  SEND DONATION
                 </button>
               </form>
             </div>
