@@ -53,7 +53,7 @@
 }
 
 .chapters-intro h2 {
-  color: var(--color-black);
+  color: var(--color-brown);
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -63,6 +63,38 @@
   color: var(--color-dark-gray);
   font-size: 1.1rem;
   line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.chapter-activities {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+}
+
+.chapter-activities li {
+  background-color: var(--color-baby-blue);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.current-chapters {
+  margin: 4rem 0;
+}
+
+.current-chapters h2 {
+  text-align: center;
+  color: var(--color-brown);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .chapters-grid {
@@ -127,9 +159,78 @@
   margin: 0 auto 2rem;
 }
 
-.join-btn {
-  background-color: var(--color-yellow);
+.start-chapter {
+  background-color: var(--color-baby-blue);
+  padding: 3rem;
+  border-radius: 10px;
+  margin-top: 4rem;
+}
+
+.start-chapter h2 {
+  text-align: center;
+  color: var(--color-brown);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.start-chapter > p {
+  text-align: center;
   color: var(--color-black);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step-item {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(139, 105, 20, 0.2);
+}
+
+.step-number {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.step-item h4 {
+  color: var(--color-black);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step-item p {
+  color: var(--color-dark-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.join-btn {
+  background-color: var(--color-brown);
+  color: var(--color-white);
   border: none;
   padding: 1rem 3rem;
   font-size: 1.1rem;
@@ -138,12 +239,14 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .join-btn:hover {
-  background-color: #f1c40f;
+  background-color: #6B5010;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(244, 208, 63, 0.4);
+  box-shadow: 0 5px 15px rgba(139, 105, 20, 0.4);
 }
 
 @media screen and (max-width: 768px) {

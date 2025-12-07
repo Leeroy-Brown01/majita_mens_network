@@ -67,7 +67,7 @@
 
 .programmes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
 }
@@ -104,6 +104,19 @@
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+}
+
+.programme-note {
+  background-color: var(--color-baby-blue);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 0.95rem !important;
+  margin-top: 1rem !important;
+  font-style: italic;
+}
+
+.programme-note strong {
+  color: var(--color-brown);
 }
 
 .programme-card ul {

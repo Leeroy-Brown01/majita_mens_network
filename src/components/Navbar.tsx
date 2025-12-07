@@ -15,7 +15,9 @@ function Navbar() {
           <li><Link to="/about" className={`navbar-link ${location.pathname === '/about' ? 'active' : ''}`}>ABOUT US</Link></li>
           <li><Link to="/chapters" className={`navbar-link ${location.pathname === '/chapters' ? 'active' : ''}`}>CHAPTERS</Link></li>
           <li><Link to="/programmes" className={`navbar-link ${location.pathname === '/programmes' ? 'active' : ''}`}>PROGRAMS</Link></li>
+          <li><Link to="/resources" className={`navbar-link ${location.pathname === '/resources' ? 'active' : ''}`}>RESOURCES</Link></li>
           <li><Link to="/media" className={`navbar-link ${location.pathname === '/media' ? 'active' : ''}`}>MEDIA & GALLERY</Link></li>
+          <li><Link to="/contact" className={`navbar-link ${location.pathname === '/contact' ? 'active' : ''}`}>CONTACT</Link></li>
           <li><Link to="/donate" className={`navbar-link ${location.pathname === '/donate' ? 'active' : ''}`}>DONATE</Link></li>
         </ul>
       </div>

@@ -35,19 +35,9 @@ function About() {
           <div className="about-story">
             <h2>Who We Are</h2>
             <p>
-              Majita Men's Network is a grassroots organization committed to engaging men and boys as allies 
-              in the fight against gender-based violence. We believe that true change begins with challenging 
-              traditional notions of masculinity and promoting healthy, respectful relationships.
-            </p>
-            <p>
-              Through our programs, we create safe spaces for men and boys to discuss issues of masculinity, 
-              relationships, and gender equality. We work closely with communities, schools, and organizations 
-              to spread our message and create lasting change.
-            </p>
-            <p>
-              Our work is guided by the belief that men have a crucial role to play in ending violence against 
-              women and girls. By engaging men and boys as partners and change agents, we can create a future 
-              where everyone lives free from violence and discrimination.
+              Majita is a membership-driven organisation built on local chapters that bring men together 
+              for learning, accountability, and collective action. Our approach blends African indigenous 
+              wisdom, evidence-based methodologies, and modern mental health support.
             </p>
           </div>
 
@@ -55,20 +45,54 @@ function About() {
             <h2>Our Core Values</h2>
             <div className="values-grid">
               <div className="value-item">
-                <h3>Respect</h3>
+                <h3>Respect and Dignity</h3>
                 <p>We honor the dignity and worth of every individual</p>
+              </div>
+              <div className="value-item">
+                <h3>Non-Violence</h3>
+                <p>We commit to peaceful resolution and reject all forms of violence</p>
               </div>
               <div className="value-item">
                 <h3>Accountability</h3>
                 <p>We take responsibility for our actions and their impact</p>
               </div>
               <div className="value-item">
-                <h3>Empowerment</h3>
-                <p>We build capacity and confidence in men and boys</p>
+                <h3>Gender Equality</h3>
+                <p>We actively promote justice and equality for all genders</p>
               </div>
               <div className="value-item">
-                <h3>Solidarity</h3>
-                <p>We stand together as allies in the fight for equality</p>
+                <h3>Community Participation</h3>
+                <p>We believe in collective action and grassroots engagement</p>
+              </div>
+              <div className="value-item">
+                <h3>Positive Masculinity</h3>
+                <p>We redefine strength as empathy, service, and self-control</p>
+              </div>
+              <div className="value-item">
+                <h3>Transparency</h3>
+                <p>We uphold good governance and open communication</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="organizational-structure">
+            <h2>How We Are Organised</h2>
+            <div className="structure-grid">
+              <div className="structure-item">
+                <h3>National Board</h3>
+                <p>Professional leaders and elected Chapter Representatives who provide strategic oversight</p>
+              </div>
+              <div className="structure-item">
+                <h3>Management Committee</h3>
+                <p>Selected Board members plus Secretariat staff coordinating operations</p>
+              </div>
+              <div className="structure-item">
+                <h3>Secretariat</h3>
+                <p>Director and programme staff implementing daily activities</p>
+              </div>
+              <div className="structure-item">
+                <h3>Community Chapters</h3>
+                <p>Chairs, Secretaries, Treasurers and members driving local action</p>
               </div>
             </div>
           </div>

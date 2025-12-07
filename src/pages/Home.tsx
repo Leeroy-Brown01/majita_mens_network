@@ -10,7 +10,15 @@ function Home() {
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>RAISING BETTER BOYS.<br />BUILDING BETTER MEN.</h1>
-          <Link to="/programmes" className="hero-btn">LEARN MORE</Link>
+          <p className="hero-subtext">
+            Majita Men's Network is a membership-driven movement working with men and boys to promote 
+            positive masculinity, prevent gender-based violence, and build healthy families and communities.
+          </p>
+          <div className="hero-buttons">
+            <Link to="/chapters" className="hero-btn primary">Join a Chapter</Link>
+            <Link to="/donate" className="hero-btn secondary">Support the Work</Link>
+            <a href="#counselling" className="hero-btn emergency">Need Counselling? Get Help Now</a>
+          </div>
         </div>
       </section>
 
@@ -19,26 +27,26 @@ function Home() {
         <div className="container">
           <h2>WHO WE ARE</h2>
           <p>
-            Majita Men's Network is a dynamic initiative dedicated to empowering boys and men to become 
-            champions of positive masculinity, healthy relationships, and gender equality. Through mentorship, 
-            advocacy, and community engagement, we are transforming lives and building a future free from 
-            gender-based violence.
+            Majita is a national network of men and boys committed to transforming harmful gender norms, 
+            strengthening fatherhood, and ending violence in homes and communities. We work through community 
+            chapters, mentorship programmes, dialogues, and safe spaces that support men's mental health and wellbeing.
           </p>
         </div>
       </section>
 
       {/* What We Do Section - White with Icons */}
+      {/* What We Do Section - White with Icons */}
       <section className="what-we-do-section">
         <div className="container">
+          <h2 className="section-title">OUR PILLARS</h2>
           <div className="pillars-grid">
             <div className="pillar-card">
               <div className="pillar-icon">
                 <FaHandsHelping />
               </div>
-              <h3>Mentorship Programs</h3>
+              <h3>Mentorship</h3>
               <p>
-                Guiding young men through life's challenges with positive role models who promote healthy 
-                masculinity and respectful relationships.
+                Guiding boys and young men into responsible, respectful manhood.
               </p>
             </div>
 
@@ -48,8 +56,7 @@ function Home() {
               </div>
               <h3>Positive Masculinity</h3>
               <p>
-                Redefining what it means to be a man through education, dialogue, and challenging harmful 
-                stereotypes and gender norms.
+                Redefining strength as empathy, accountability, dignity, self-control, and service.
               </p>
             </div>
 
@@ -57,16 +64,37 @@ function Home() {
               <div className="pillar-icon">
                 <FaShieldAlt />
               </div>
-              <h3>Ending Gender-Based Violence</h3>
+              <h3>Ending GBV</h3>
               <p>
-                Working to eliminate all forms of violence against women and girls through awareness, 
-                prevention, and community action.
+                Mobilising men as allies to prevent violence and promote safety in homes and communities.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Featured Sections */}
+      <section className="featured-sections">
+        <div className="container">
+          <div className="featured-grid">
+            <div className="featured-card">
+              <h3>Community Chapters</h3>
+              <p>
+                Local Majita chapters are active where men live, work, worship and socialise.
+              </p>
+              <Link to="/chapters" className="featured-link">→ See where we are</Link>
+            </div>
+
+            <div className="featured-card">
+              <h3>Men's Mental Health</h3>
+              <p>
+                We offer safe circles, confidential conversations, and referrals for counselling.
+              </p>
+              <a href="#counselling" className="featured-link">→ Request Counselling</a>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* What We Do Title Section - Blue */}
       <section className="what-we-do-title-section">
         <div className="container">

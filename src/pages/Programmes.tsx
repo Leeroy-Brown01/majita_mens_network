@@ -1,4 +1,4 @@
-import { FaUsers, FaHandshake, FaBullhorn, FaChalkboardTeacher } from 'react-icons/fa';
+import { FaUsers, FaHandshake, FaBullhorn, FaChalkboardTeacher, FaBrain } from 'react-icons/fa';
 import './Programmes.css';
 
 function Programmes() {
@@ -25,73 +25,112 @@ function Programmes() {
           <div className="programmes-grid">
             <div className="programme-card">
               <div className="programme-icon">
-                <FaUsers />
+                <FaBrain />
               </div>
-              <h3>Boys to Men Mentorship</h3>
+              <h3>Men's Mental Health & Counselling</h3>
               <p>
-                A structured mentorship program pairing young boys with positive male role models who 
-                guide them through adolescence, teaching them about healthy relationships, emotional 
-                intelligence, and responsible manhood.
+                We provide safe spaces and professional support for men dealing with mental health 
+                challenges. Our trained counsellors help men navigate:
               </p>
               <ul>
-                <li>Weekly mentorship sessions</li>
-                <li>Life skills training</li>
-                <li>Career guidance</li>
-                <li>Sports and recreation activities</li>
+                <li>Anger management</li>
+                <li>Depression and anxiety</li>
+                <li>Trauma and PTSD</li>
+                <li>Substance abuse</li>
+                <li>Relationship difficulties</li>
+                <li>Work-life stress</li>
               </ul>
+              <p className="programme-note">
+                <strong>Free confidential support available.</strong> Contact us anytime.
+              </p>
             </div>
 
             <div className="programme-card">
               <div className="programme-icon">
                 <FaChalkboardTeacher />
               </div>
-              <h3>School Engagement Program</h3>
+              <h3>School Mentorship Programme</h3>
               <p>
-                Interactive workshops and seminars conducted in schools to educate students about gender 
-                equality, consent, healthy relationships, and the importance of standing against 
-                gender-based violence.
+                We work with secondary schools to mentor adolescent boys through weekly sessions. 
+                Our mentors guide young men on:
               </p>
               <ul>
-                <li>Classroom workshops</li>
-                <li>Peer education training</li>
-                <li>Teachers' capacity building</li>
-                <li>Student-led campaigns</li>
+                <li>Healthy masculinity</li>
+                <li>Respectful relationships</li>
+                <li>Consent and boundaries</li>
+                <li>Career development</li>
+                <li>Emotional intelligence</li>
+                <li>Life skills training</li>
               </ul>
+              <p className="programme-note">
+                Building positive role models for the next generation.
+              </p>
             </div>
 
             <div className="programme-card">
               <div className="programme-icon">
                 <FaBullhorn />
               </div>
-              <h3>Community Advocacy</h3>
+              <h3>Community Dialogues</h3>
               <p>
-                Grassroots campaigns and community dialogues that challenge harmful gender norms and 
-                mobilize men to become advocates for women's rights and gender equality in their 
-                communities.
+                Monthly meetings where men come together to discuss gender issues, share experiences, 
+                and learn from each other. Topics include:
               </p>
               <ul>
-                <li>Community dialogues</li>
-                <li>Awareness campaigns</li>
-                <li>Men's support groups</li>
-                <li>Cultural engagement</li>
+                <li>Ending gender-based violence</li>
+                <li>Positive masculinity practices</li>
+                <li>Fatherhood and parenting</li>
+                <li>Cultural norms and change</li>
+                <li>Mental health awareness</li>
+                <li>Community accountability</li>
               </ul>
+              <p className="programme-note">
+                Open to all chapter members and interested community members.
+              </p>
             </div>
 
             <div className="programme-card">
               <div className="programme-icon">
                 <FaHandshake />
               </div>
-              <h3>Father Engagement Initiative</h3>
+              <h3>GBV Prevention & Referral</h3>
               <p>
-                Supporting fathers to become more involved in parenting and household responsibilities, 
-                promoting equitable relationships and modeling positive masculinity for their children.
+                We actively work to prevent gender-based violence through education and provide 
+                referral services to survivors. Our work includes:
               </p>
               <ul>
-                <li>Parenting skills workshops</li>
-                <li>Father-child bonding activities</li>
-                <li>Co-parenting support</li>
-                <li>Work-life balance guidance</li>
+                <li>Awareness campaigns</li>
+                <li>Bystander intervention training</li>
+                <li>Perpetrator accountability programs</li>
+                <li>Survivor support referrals</li>
+                <li>Community watch initiatives</li>
+                <li>Policy advocacy</li>
               </ul>
+              <p className="programme-note">
+                Working with partner organizations for comprehensive support.
+              </p>
+            </div>
+
+            <div className="programme-card">
+              <div className="programme-icon">
+                <FaUsers />
+              </div>
+              <h3>Research & Evidence Generation</h3>
+              <p>
+                We conduct research to inform our programs and contribute to the evidence base on 
+                engaging men in gender equality. Our research includes:
+              </p>
+              <ul>
+                <li>Masculinity studies</li>
+                <li>Program impact assessments</li>
+                <li>Community needs surveys</li>
+                <li>Best practice documentation</li>
+                <li>Policy briefs</li>
+                <li>Annual reports</li>
+              </ul>
+              <p className="programme-note">
+                Visit our Resources page for published research and reports.
+              </p>
             </div>
           </div>
 

@@ -38,31 +38,73 @@
   color: var(--color-white);
   font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
+}
+
+.hero-subtext {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-btn {
   background-color: var(--color-yellow);
   color: var(--color-black);
   border: none;
-  padding: 1rem 3rem;
-  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   display: inline-block;
 }
 
+.hero-btn.primary {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.hero-btn.secondary {
+  background-color: var(--color-brown);
+  color: var(--color-white);
+}
+
+.hero-btn.emergency {
+  background-color: #c0392b;
+  color: var(--color-white);
+}
+
 .hero-btn:hover {
-  background-color: #f1c40f;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(244, 208, 63, 0.4);
+}
+
+.hero-btn.primary:hover {
+  background-color: #f1c40f;
+}
+
+.hero-btn.secondary:hover {
+  background-color: #6B5010;
+}
+
+.hero-btn.emergency:hover {
+  background-color: #a83229;
 }
 
 /* Who We Are Section - Baby Blue */
@@ -76,21 +118,18 @@
   color: var(--color-black);
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.who-we-are-section p {
-  color: var(--color-black);
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 /* What We Do Section - White with Cards */
 .what-we-do-section {
   background-color: var(--color-white);
   padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--color-black);
 }
 
 .pillars-grid {
@@ -123,10 +162,61 @@
 
 .pillar-card h3 {
   color: var(--color-black);
-  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Featured Sections */
+.featured-sections {
+  background-color: var(--color-light-gray);
+  padding: 4rem 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featured-card {
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card h3 {
+  color: var(--color-black);
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+.featured-card p {
+  color: var(--color-dark-gray);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.featured-link {
+  color: var(--color-brown);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.featured-link:hover {
+  color: var(--color-black);
+}
+
+/* What We Do Title Section - Blue */
 
 .pillar-card p {
   color: var(--color-dark-gray);
@@ -158,22 +248,19 @@
 
 .info-banner {
   margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: start;
 }
 
 .banner-image {
-  max-width: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-height: 600px;
+  display: block;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  flex: 1;
-  min-width: 300px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -203,6 +290,10 @@
   .pillars-grid {
     grid-template-columns: 1fr;
   }
+
+  .info-banner {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -217,4 +308,9 @@
   .pillar-card {
     padding: 2rem 1.5rem;
   }
+
+  .info-banner {
+    gap: 0.5rem;
+  }
+}
 }

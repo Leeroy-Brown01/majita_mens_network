@@ -13,64 +13,91 @@ function Chapters() {
       <section className="chapters-content">
         <div className="container">
           <div className="chapters-intro">
-            <h2>Our Growing Network</h2>
+            <h2>How Chapters Work</h2>
             <p>
-              Majita Men's Network is expanding across Zimbabwe, establishing chapters in communities 
-              where men and boys can come together to learn, grow, and advocate for positive change. 
-              Each chapter is led by passionate local leaders committed to ending gender-based violence 
-              and promoting healthy masculinity.
+              Chapters are the grassroots structure of Majita. Paid-up members meet regularly for:
+            </p>
+            <ul className="chapter-activities">
+              <li>Men's circles</li>
+              <li>Workshops</li>
+              <li>Community activities</li>
+              <li>Mentorship</li>
+              <li>Dialogue sessions</li>
+            </ul>
+            <p>
+              Each chapter elects its Chair, Secretary, and Treasurer, who coordinate activities and 
+              represent the chapter at the AGM.
             </p>
           </div>
 
-          <div className="chapters-grid">
-            <div className="chapter-card">
-              <h3>Harare Chapter</h3>
-              <p><strong>Location:</strong> Harare Metropolitan</p>
-              <p><strong>Established:</strong> 2020</p>
-              <p>
-                Our flagship chapter serving the capital city and surrounding areas. Active in schools, 
-                communities, and universities.
-              </p>
-            </div>
+          <div className="current-chapters">
+            <h2>Current Chapters</h2>
+            <div className="chapters-grid">
+              <div className="chapter-card">
+                <h3>Harare Urban</h3>
+                <p><strong>Areas:</strong> CBD, Mbare, Highfield, Glen View</p>
+                <p>Serving men in Zimbabwe's capital city and urban townships.</p>
+              </div>
 
-            <div className="chapter-card">
-              <h3>Bulawayo Chapter</h3>
-              <p><strong>Location:</strong> Bulawayo Metropolitan</p>
-              <p><strong>Established:</strong> 2021</p>
-              <p>
-                Engaging young men in Zimbabwe's second-largest city through mentorship and advocacy 
-                programs.
-              </p>
-            </div>
+              <div className="chapter-card">
+                <h3>Harare Peri-Urban</h3>
+                <p><strong>Areas:</strong> Chitungwiza, Ruwa, Norton</p>
+                <p>Reaching men in peri-urban communities around Harare.</p>
+              </div>
 
-            <div className="chapter-card">
-              <h3>Mutare Chapter</h3>
-              <p><strong>Location:</strong> Manicaland Province</p>
-              <p><strong>Established:</strong> 2022</p>
-              <p>
-                Working with rural and urban communities in the Eastern Highlands to promote gender 
-                equality.
-              </p>
-            </div>
+              <div className="chapter-card">
+                <h3>Manicaland Chapter</h3>
+                <p><strong>Location:</strong> Eastern Zimbabwe</p>
+                <p>Engaging men in the Eastern Highlands region.</p>
+              </div>
 
-            <div className="chapter-card">
-              <h3>Gweru Chapter</h3>
-              <p><strong>Location:</strong> Midlands Province</p>
-              <p><strong>Established:</strong> 2023</p>
-              <p>
-                Our newest chapter, rapidly growing and making an impact in central Zimbabwe's 
-                communities.
-              </p>
+              <div className="chapter-card">
+                <h3>Midlands Chapter</h3>
+                <p><strong>Location:</strong> Central Zimbabwe</p>
+                <p>Active in Gweru and surrounding areas.</p>
+              </div>
+
+              <div className="chapter-card">
+                <h3>Matebeleland North Chapter</h3>
+                <p><strong>Location:</strong> Northern Zimbabwe</p>
+                <p>Working with communities in the northern region.</p>
+              </div>
             </div>
           </div>
 
-          <div className="join-chapter">
-            <h2>Start a Chapter in Your Community</h2>
-            <p>
-              Interested in bringing Majita Men's Network to your area? We provide training, resources, 
-              and ongoing support to help you establish and lead a successful chapter.
-            </p>
-            <button className="join-btn">Get Started</button>
+          <div className="start-chapter">
+            <h2>Start a New Chapter</h2>
+            <p>Any committed group of men can start a Majita Chapter.</p>
+            <div className="steps-grid">
+              <div className="step-item">
+                <div className="step-number">1</div>
+                <h4>Form a Group</h4>
+                <p>Gather 10+ committed men who share the vision</p>
+              </div>
+              <div className="step-item">
+                <div className="step-number">2</div>
+                <h4>Adopt Constitution</h4>
+                <p>Review and adopt the Majita Constitution</p>
+              </div>
+              <div className="step-item">
+                <div className="step-number">3</div>
+                <h4>Elect Leaders</h4>
+                <p>Choose your Chair, Secretary, and Treasurer</p>
+              </div>
+              <div className="step-item">
+                <div className="step-number">4</div>
+                <h4>Register</h4>
+                <p>Register with the Secretariat officially</p>
+              </div>
+              <div className="step-item">
+                <div className="step-number">5</div>
+                <h4>Start Activities</h4>
+                <p>Begin monthly meetings and community work</p>
+              </div>
+            </div>
+            <div style={{textAlign: 'center', marginTop: '2rem'}}>
+              <a href="mailto:majitamensnetwork@gmail.com" className="join-btn">Contact Us to Start a Chapter</a>
+            </div>
           </div>
         </div>
       </section>

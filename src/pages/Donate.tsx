@@ -231,6 +231,52 @@ function Donate() {
           </div>
 
           <div className="other-ways">
+            <h2>Payment Methods</h2>
+            <p className="payment-intro">Choose the method that works best for you:</p>
+            <div className="payment-methods">
+              <div className="payment-card">
+                <h3>🏦 Bank Transfer</h3>
+                <div className="payment-details">
+                  <p><strong>Bank:</strong> Stanbic Bank</p>
+                  <p><strong>Branch:</strong> Minerva Branch</p>
+                  <p><strong>Account Number:</strong> 987654321</p>
+                  <p><strong>Account Name:</strong> Majita Men's Network</p>
+                  <p><strong>SWIFT Code:</strong> SBICZWHX</p>
+                </div>
+                <p className="payment-note">For international transfers</p>
+              </div>
+
+              <div className="payment-card">
+                <h3>📱 EcoCash</h3>
+                <div className="payment-details">
+                  <p><strong>Number:</strong> +263 78 751 8760</p>
+                  <p><strong>Name:</strong> Majita Men's Network</p>
+                </div>
+                <p className="payment-note">Send to this number and send proof of payment to our email</p>
+              </div>
+
+              <div className="payment-card">
+                <h3>💳 PayPal</h3>
+                <div className="payment-details">
+                  <p><strong>Account:</strong> paypal.me/majitazw</p>
+                </div>
+                <a 
+                  href="https://paypal.me/majitazw" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="paypal-btn"
+                >
+                  Donate via PayPal
+                </a>
+                <p className="payment-note">Secure international payments</p>
+              </div>
+            </div>
+            <p className="payment-confirmation">
+              After making a payment, please email proof of payment to <a href="mailto:majitamensnetwork@gmail.com">majitamensnetwork@gmail.com</a> with your details.
+            </p>
+          </div>
+
+          <div className="other-ways">
             <h2>Other Ways to Support</h2>
             <div className="ways-grid">
               <div className="way-card">

@@ -218,8 +218,115 @@
   transform: translateY(-2px);
 }
 
+.payment-intro {
+  text-align: center;
+  color: var(--color-dark-gray);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.payment-card {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-baby-blue);
+  border-radius: 10px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(167, 199, 231, 0.3);
+  border-color: var(--color-brown);
+}
+
+.payment-card h3 {
+  color: var(--color-brown);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.payment-details {
+  text-align: left;
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.payment-details p {
+  color: var(--color-black);
+  font-size: 0.95rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+
+.payment-details p:last-child {
+  margin-bottom: 0;
+}
+
+.payment-details strong {
+  color: var(--color-brown);
+  display: inline-block;
+  min-width: 140px;
+}
+
+.payment-note {
+  color: var(--color-dark-gray);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.paypal-btn {
+  display: inline-block;
+  background-color: #0070ba;
+  color: var(--color-white);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.paypal-btn:hover {
+  background-color: #005a92;
+  transform: translateY(-2px);
+}
+
+.payment-confirmation {
+  text-align: center;
+  background-color: var(--color-baby-blue);
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: var(--color-black);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 2rem;
+}
+
+.payment-confirmation a {
+  color: var(--color-brown);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.payment-confirmation a:hover {
+  text-decoration: underline;
+}
+
 .other-ways {
   text-align: center;
+  margin-top: 4rem;
 }
 
 .other-ways h2 {

@@ -1,0 +1,94 @@
+.counselling-help-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 25px rgba(192, 57, 43, 0.5);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.counselling-help-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(192, 57, 43, 0.6);
+}
+
+.help-icon {
+  font-size: 1.5rem;
+  animation: rotate 3s linear infinite;
+}
+
+.help-text {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(192, 57, 43, 0.5);
+  }
+  50% {
+    box-shadow: 0 8px 35px rgba(192, 57, 43, 0.7);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .counselling-help-button {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .help-text {
+    font-size: 0.9rem;
+  }
+
+  .help-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .counselling-help-button {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .help-text {
+    display: none;
+  }
+
+  .help-icon {
+    font-size: 1.5rem;
+  }
+}
