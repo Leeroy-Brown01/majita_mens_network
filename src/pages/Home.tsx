@@ -77,6 +77,7 @@ function Home() {
           </p>
           <div className="info-banner">
             <img src="/images/branding/info_banner.jpg" alt="Majita Men's Network Information" className="banner-image" />
+            <img src="/images/branding/info_banner_2.jpg" alt="Majita Men's Network Programs" className="banner-image" />
           </div>
         </div>
       </section>

@@ -33,13 +33,13 @@ function Footer() {
         <div className="footer-section">
           <h4>Follow Us</h4>
           <div className="footer-social">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/19ZyueEbhA/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/majita-men-s-network/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
             <a href="https://chat.whatsapp.com/Hb6L6EfU72u5glneBy619G" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -49,8 +49,12 @@ function Footer() {
         </div>
       </div>
 
+      <div className="footer-hashtags">
+        <p>#EndGBV   #PositiveMasculinity   #RaiseBetterBoys   #StopRapeCulture</p>
+      </div>
+
       <div className="footer-bottom">
-        <p>&copy; 2024 Majita Men's Network. All rights reserved.</p>
+        <p>&copy; 2025 Majita Men's Network. All rights reserved.</p>
       </div>
     </footer>
   );

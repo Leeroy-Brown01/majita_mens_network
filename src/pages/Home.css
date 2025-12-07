@@ -159,8 +159,10 @@
 .info-banner {
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 
 .banner-image {
@@ -170,6 +172,8 @@
   max-height: 600px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  min-width: 300px;
 }
 
 @media screen and (max-width: 768px) {
