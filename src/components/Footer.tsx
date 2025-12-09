@@ -36,7 +36,7 @@ function Footer() {
             <a href="https://www.facebook.com/share/19ZyueEbhA/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <a href="https://x.com/majita90936?t=Pb3sH2X_wXQ1ajXx9c_APg&s=08" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <FaTwitter />
             </a>
             <a href="https://www.linkedin.com/company/majita-men-s-network/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
