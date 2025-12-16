@@ -39,35 +39,44 @@ function Home() {
       <section className="what-we-do-section">
         <div className="container">
           <h2 className="section-title">OUR PILLARS</h2>
-          <div className="pillars-grid">
-            <div className="pillar-card">
+          <div className="pillars-list">
+            <div className="pillar-card-float">
+              <div className="pillar-number">01</div>
               <div className="pillar-icon">
                 <FaHandsHelping />
               </div>
-              <h3>Mentorship</h3>
-              <p>
-                Guiding boys and young men into responsible, respectful manhood.
-              </p>
+              <div className="pillar-content">
+                <h3>Mentorship</h3>
+                <p>
+                  Guiding boys and young men into responsible, respectful manhood.
+                </p>
+              </div>
             </div>
 
-            <div className="pillar-card">
+            <div className="pillar-card-float">
+              <div className="pillar-number">02</div>
               <div className="pillar-icon">
                 <FaUsers />
               </div>
-              <h3>Positive Masculinity</h3>
-              <p>
-                Redefining strength as empathy, accountability, dignity, self-control, and service.
-              </p>
+              <div className="pillar-content">
+                <h3>Positive Masculinity</h3>
+                <p>
+                  Redefining strength as empathy, accountability, dignity, self-control, and service.
+                </p>
+              </div>
             </div>
 
-            <div className="pillar-card">
+            <div className="pillar-card-float">
+              <div className="pillar-number">03</div>
               <div className="pillar-icon">
                 <FaShieldAlt />
               </div>
-              <h3>Ending GBV</h3>
-              <p>
-                Mobilising men as allies to prevent violence and promote safety in homes and communities.
-              </p>
+              <div className="pillar-content">
+                <h3>Ending GBV</h3>
+                <p>
+                  Mobilising men as allies to prevent violence and promote safety in homes and communities.
+                </p>
+              </div>
             </div>
           </div>
         </div>

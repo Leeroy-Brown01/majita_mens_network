@@ -118,10 +118,12 @@
   color: var(--color-black);
   font-size: 2.5rem;
   font-weight: 700;
-/* What We Do Section - White with Cards */
+}
+
+/* What We Do Section - With Floating Cards */
 .what-we-do-section {
-  background-color: var(--color-white);
-  padding: 4rem 0;
+  background-color: #f5f5f5;
+  padding: 5rem 0;
 }
 
 .section-title {
@@ -132,37 +134,75 @@
   color: var(--color-black);
 }
 
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.pillars-list {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-top: 2rem;
+  max-width: 850px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
 }
 
-.pillar-card {
-  background-color: var(--color-white);
-  border: 2px solid var(--color-baby-blue);
-  border-radius: 10px;
-  padding: 2.5rem 2rem;
-  text-align: center;
+.pillar-card-float {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--color-yellow);
 }
 
-.pillar-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(167, 199, 231, 0.3);
-  border-color: var(--color-yellow);
+.pillar-card-float:hover {
+  transform: translateY(-8px) translateX(5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.pillar-card-float:nth-child(2) {
+  border-left-color: var(--color-baby-blue);
+}
+
+.pillar-card-float:nth-child(3) {
+  border-left-color: var(--color-brown);
+}
+
+.pillar-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-light-gray);
+  opacity: 0.5;
+  min-width: 60px;
 }
 
 .pillar-icon {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: var(--color-black);
-  margin-bottom: 1.5rem;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pillar-card h3 {
+.pillar-content {
+  flex: 1;
+}
+
+.pillar-content h3 {
   color: var(--color-black);
-  line-height: 1.7;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pillar-content p {
+  color: var(--color-dark-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Featured Sections */
@@ -214,14 +254,6 @@
 
 .featured-link:hover {
   color: var(--color-black);
-}
-
-/* What We Do Title Section - Blue */
-
-.pillar-card p {
-  color: var(--color-dark-gray);
-  font-size: 1rem;
-  line-height: 1.7;
 }
 
 /* What We Do Title Section - Blue */
@@ -287,8 +319,12 @@
     font-size: 1rem;
   }
 
-  .pillars-grid {
-    grid-template-columns: 1fr;
+  .pillars-list {
+    padding: 0 1rem;
+  }
+
+  .pillar-card-float {
+    padding: 1.5rem;
   }
 
   .info-banner {
@@ -302,15 +338,43 @@
   }
 
   .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .pillar-card-float {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .pillar-number {
     font-size: 2rem;
   }
 
-  .pillar-card {
-    padding: 2rem 1.5rem;
+  .pillar-content h3 {
+    font-size: 1.2rem;
   }
 
   .info-banner {
+    flex-direction: column;
     gap: 0.5rem;
+    padding: 1rem;
   }
-}
+
+  .featured-card {
+    padding: 1.5rem;
+  }
+
+  .featured-card h3 {
+    font-size: 1.4rem;
+  }
 }

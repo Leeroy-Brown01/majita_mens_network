@@ -406,7 +406,56 @@
     padding: 1.5rem;
   }
 
-  .ways-grid {
+  .ways-grid,
+  .payment-methods {
     grid-template-columns: 1fr;
+  }
+
+  .payment-card {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .donate-hero {
+    padding: 3rem 0;
+  }
+
+  .donate-hero h1 {
+    font-size: 2rem;
+  }
+
+  .donate-subtitle {
+    font-size: 1rem;
+  }
+
+  .donate-content {
+    padding: 2rem 0;
+  }
+
+  .donate-intro h2,
+  .other-ways h2 {
+    font-size: 1.6rem;
+  }
+
+  .donate-form-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .donate-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .whatsapp-card {
+    padding: 1.5rem;
+  }
+
+  .whatsapp-icon {
+    font-size: 2.5rem;
+  }
+
+  .way-card {
+    padding: 1.5rem;
   }
 }

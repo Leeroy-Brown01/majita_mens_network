@@ -202,4 +202,49 @@
   .programme-card {
     padding: 2rem;
   }
+
+  .join-programme {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .programmes-hero {
+    padding: 3rem 0;
+  }
+
+  .programmes-hero h1 {
+    font-size: 2rem;
+  }
+
+  .programmes-subtitle {
+    font-size: 1rem;
+  }
+
+  .programmes-content {
+    padding: 2rem 0;
+  }
+
+  .programmes-intro h2,
+  .join-programme h2 {
+    font-size: 1.6rem;
+  }
+
+  .programme-card {
+    padding: 1.5rem;
+  }
+
+  .programme-icon {
+    font-size: 2.5rem;
+  }
+
+  .programme-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .join-btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
 }

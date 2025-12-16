@@ -196,11 +196,63 @@
   }
 
   .about-story h2,
-  .about-values h2 {
+  .about-values h2,
+  .organizational-structure h2 {
     font-size: 2rem;
   }
 
-  .values-grid {
+  .values-grid,
+  .structure-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-values,
+  .organizational-structure {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-hero {
+    padding: 3rem 0;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    padding: 2rem 0;
+  }
+
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-story h2,
+  .about-values h2,
+  .organizational-structure h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-story p,
+  .about-card p {
+    font-size: 1rem;
+  }
+
+  .value-item {
+    padding: 1rem;
+  }
+
+  .structure-item {
+    padding: 1.5rem;
   }
 }

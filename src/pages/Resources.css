@@ -255,4 +255,57 @@
   .stories-section {
     padding: 2rem 1rem;
   }
+
+  .contribute-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .contribute-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resources-hero {
+    padding: 3rem 0;
+  }
+
+  .resources-hero h1 {
+    font-size: 2rem;
+  }
+
+  .resources-subtitle {
+    font-size: 1rem;
+  }
+
+  .resources-content {
+    padding: 2rem 0;
+  }
+
+  .resources-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-icon {
+    font-size: 2rem;
+  }
+
+  .resource-card,
+  .story-card {
+    padding: 1.5rem;
+  }
+
+  .resource-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .download-btn,
+  .contribute-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
 }
