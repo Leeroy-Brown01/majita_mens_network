@@ -204,17 +204,19 @@
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 2px solid var(--color-light-gray);
+  border: 2px solid #000000;
   border-radius: 5px;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   transition: border-color 0.3s ease;
+  background-color: #ffffff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-brown);
+  box-shadow: 0 0 0 3px rgba(139, 105, 20, 0.2);
 }
 
 .form-row {
@@ -266,10 +268,17 @@
   margin-top: 1rem;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background-color: #6B5010;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(139, 105, 20, 0.4);
+}
+
+.submit-btn:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.8;
 }
 
 .form-note {

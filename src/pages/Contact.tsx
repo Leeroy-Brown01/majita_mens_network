@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import NotificationModal from '../components/NotificationModal';
 import './Contact.css';
 
 function Contact() {
@@ -11,6 +12,13 @@ function Contact() {
     message: '',
     needsCounselling: false
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [modal, setModal] = useState<{
+    isOpen: boolean;
+    title: string;
+    message: string;
+    type: 'success' | 'error';
+  }>({ isOpen: false, title: '', message: '', type: 'success' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const target = e.target;
@@ -25,27 +33,45 @@ function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/xwpgqdpn', {
+      const form = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(form);
+
+      // Remove the default checkbox value and add explicit boolean
+      formDataToSend.delete('needsCounselling');
+      formDataToSend.append('needsCounselling', formData.needsCounselling ? 'Yes - Needs Counselling Support' : 'No');
+
+      formDataToSend.append(
+        '_subject',
+        formData.needsCounselling
+          ? `URGENT - Counselling Request: ${formData.subject}`
+          : `Contact Form: ${formData.subject}`
+      );
+      formDataToSend.append('_replyto', formData.email);
+      formDataToSend.append('_to', 'majitamensnetwork@gmail.com');
+      formDataToSend.append('_cc', 'melodymhlanga7@gmail.com');
+      formDataToSend.append('_cc', 'brownleeroy010@gmail.com');
+      formDataToSend.append('_template', 'table');
+
+      const response = await fetch('https://formspree.io/f/mldqlyjq', {
         method: 'POST',
+        body: formDataToSend,
         headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          ...formData,
-          _subject: formData.needsCounselling 
-            ? `URGENT - Counselling Request: ${formData.subject}` 
-            : `Contact Form: ${formData.subject}`,
-          _replyto: formData.email,
-          _cc: 'majitamensnetwork@gmail.com'
-        })
+          Accept: 'application/json'
+        }
       });
 
       if (response.ok) {
-        alert(formData.needsCounselling 
-          ? 'Your counselling request has been received. We will contact you as soon as possible.' 
-          : 'Thank you for reaching out! We will get back to you soon.');
+        setModal({
+          isOpen: true,
+          title: formData.needsCounselling ? 'Request Received!' : 'Message Sent!',
+          message: formData.needsCounselling
+            ? 'Your counselling request has been received. We will contact you as soon as possible.'
+            : 'Thank you for reaching out! We will get back to you soon.',
+          type: 'success'
+        });
         setFormData({
           name: '',
           email: '',
@@ -55,10 +81,22 @@ function Contact() {
           needsCounselling: false
         });
       } else {
-        alert('There was a problem submitting your message. Please try again or contact us directly.');
+        setModal({
+          isOpen: true,
+          title: 'Submission Failed',
+          message: 'There was a problem submitting your message. Please try again or contact us directly.',
+          type: 'error'
+        });
       }
     } catch (error) {
-      alert('There was a problem submitting your message. Please try again or contact us directly.');
+      setModal({
+        isOpen: true,
+        title: 'Submission Failed',
+        message: 'There was a problem submitting your message. Please try again or contact us directly.',
+        type: 'error'
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -240,8 +278,12 @@ function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="submit-btn">
-                  {formData.needsCounselling ? 'Request Counselling Support' : 'Send Message'}
+                <button type="submit" className="submit-btn" disabled={isLoading}>
+                  {isLoading 
+                    ? 'Sending...' 
+                    : formData.needsCounselling 
+                      ? 'Request Counselling Support' 
+                      : 'Send Message'}
                 </button>
 
                 <p className="form-note">
@@ -252,6 +294,14 @@ function Contact() {
           </div>
         </div>
       </section>
+
+      <NotificationModal
+        isOpen={modal.isOpen}
+        onClose={() => setModal(prev => ({ ...prev, isOpen: false }))}
+        title={modal.title}
+        message={modal.message}
+        type={modal.type}
+      />
     </div>
   );
 }

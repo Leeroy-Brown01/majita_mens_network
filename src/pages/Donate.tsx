@@ -1,5 +1,6 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import { useState } from 'react';
+import NotificationModal from '../components/NotificationModal';
 import './Donate.css';
 
 function Donate() {
@@ -13,6 +14,13 @@ function Donate() {
     address: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [modal, setModal] = useState<{
+    isOpen: boolean;
+    title: string;
+    message: string;
+    type: 'success' | 'error';
+  }>({ isOpen: false, title: '', message: '', type: 'success' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -23,6 +31,7 @@ function Donate() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     
     const form = e.target as HTMLFormElement;
     const formDataToSend = new FormData(form);
@@ -43,11 +52,16 @@ function Donate() {
       });
       
       if (response.ok) {
-        alert('Thank you for your donation! We will contact you shortly.');
+        setModal({
+          isOpen: true,
+          title: 'Thank You!',
+          message: 'Thank you for your donation! We will contact you shortly.',
+          type: 'success'
+        });
         setFormData({
           firstname: '',
           lastname: '',
-         email: '',
+          email: '',
           phone: '',
           country: '',
           city: '',
@@ -55,10 +69,22 @@ function Donate() {
           message: ''
         });
       } else {
-        alert('There was a problem submitting your donation. Please try again or contact us directly.');
+        setModal({
+          isOpen: true,
+          title: 'Submission Failed',
+          message: 'There was a problem submitting your donation. Please try again or contact us directly.',
+          type: 'error'
+        });
       }
     } catch (error) {
-      alert('There was a problem submitting your donation. Please try again or contact us directly.');
+      setModal({
+        isOpen: true,
+        title: 'Submission Failed',
+        message: 'There was a problem submitting your donation. Please try again or contact us directly.',
+        type: 'error'
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -204,8 +230,8 @@ function Donate() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="donate-btn">
-                  SEND DONATION
+                <button type="submit" className="donate-btn" disabled={isLoading}>
+                  {isLoading ? 'Sending...' : 'SEND DONATION'}
                 </button>
               </form>
             </div>
@@ -295,6 +321,14 @@ function Donate() {
           </div>
         </div>
       </section>
+
+      <NotificationModal
+        isOpen={modal.isOpen}
+        onClose={() => setModal(prev => ({ ...prev, isOpen: false }))}
+        title={modal.title}
+        message={modal.message}
+        type={modal.type}
+      />
     </div>
   );
 }
