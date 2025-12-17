@@ -9,7 +9,7 @@ function Home() {
       <section className="hero-section">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>RAISING BETTER BOYS.<br />BUILDING BETTER MEN. lee</h1>
+          <h1>RAISING BETTER BOYS.<br />BUILDING BETTER MEN.</h1>
           <p className="hero-subtext">
             Majita Men's Network is a membership-driven movement working with men and boys to promote 
             positive masculinity, prevent gender-based violence, and build healthy families and communities.
